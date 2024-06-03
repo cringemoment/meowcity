@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "comic mono";
+  src: url('https://dtinth.github.io/comic-mono-font/ComicMono.ttf');
+}
+
+@font-face {
+  font-family: "windows 95";
+  src: url('../fonts/Windows Regular.ttf')
+}
+
+html {
+  height: 100vh;
+  cursor: url(../assets/cursor.png) 13 13, auto;
+  background: #000f14;
+  font-family: "comic mono";
+  overflow: hidden;
+}
+
+.pagebox {
+  border-color: #00ff00;
+  border-width: 0.2rem;
+  border-style: solid;
+  overflow: hidden;
+  position: absolute;
+  background-color: white;
+  padding-left: 1rem;
+  padding-top: 0.3rem;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+.mainbox {
+  overflow: auto;
+  left: 34vw;
+  top: 20vh;
+  width: 55vw;
+  height: 58vh;
+}
+
+.sidebar {
+  left: 15vw;
+  top: 20vh;
+  width: 18vw;
+  height: 58vh;
+}
+
+.title {
+  left: 15vw;
+  top: 3vh;
+  width: 74vw;
+  height: 15vh;
+  display: flex;
+  text-align: right;
+  padding: 0.3rem;
+}
+
+li::marker {
+  color: #03c2fc;
+  content: "> ";
+  font-size: 1.3rem;
+}
+
+.logo {
+  align-self: left;
+  height: 100%;
+}
+
+.sidebar_link {
+  color: #03c2fc;
+}
+
+.sidebar_link span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+#audioplayer {
+  font-family: "windows 95";
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: bottom;
+  justify-content: space-between;
+  width: 20rem;
+  height: 9rem;
+  background-color: #b9b9b9;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border: 0.15rem solid;
+  border-left-color: white;
+  border-top-color: white;
+}
+
+.audiobutton {
+  background-color: transparent;
+  border: inherit;
+  cursor: pointer;
+  bottom: 0.5rem;
+}
+
+.songtitle {
+  padding-top: 0.3rem;
+  padding-left: 0.2rem;
+  margin-top: 0;
+  margin-left: 0;
+  background-color: #001983;
+  width: 100%;
+  color: white;
+}
+
+.badges {
+  display: flex;
+  padding: 0;
+  left: 15vw;
+  top: 80vh;
+  width: 74vw;
+  height: 18vh;
+}
+
+.badge {
+  width: 88px;
+  height: 31px;
+}
+
+.webring {
+  border: 0.2rem solid white;
+  font-family: "windows 95";
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  display: flex;
+  width: 30%;
+  height: 100%;
+  align-items: left;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.webringtext {
+  left: 5rem;
+  position: absolute;
+}
+
+.webringimage {
+  top: 1rem;
+  position: absolute;
+  height: 4rem;
+}
+
+.webringlinks {
+  display: flex;
+  color: #03c2fc;
+  justify-content: space-between;
+  width: 30%;
+  vertical-align: bottom;
+  position: absolute;
+  top: 5rem;
+}
+
+a{
+  text-decoration: none;
+  color: #03c2fc;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.star,
+.cursorstar {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    animation: twinkle 1s infinite;
+}
+
+.cursorstar {
+  background: yellow;
+  animation: fadeout 1s forwards;
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+    transform: scale(2);
+    transform: translateY(2vh);
+  }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
